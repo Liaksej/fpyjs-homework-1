@@ -1,0 +1,24 @@
+<p>Loading, please wait...</p>
+<script>
+    let impliedNumber = Math.floor(Math.random() * 1000);
+    console.log(impliedNumber)
+
+    while (true) {
+        let proposedNumber = +prompt("Input a number");
+        if (isNaN(proposedNumber)) {
+            alert("It's not a number")
+        }
+        else {
+            if (impliedNumber === proposedNumber) {
+                alert("You guessed it!!!")
+                break
+            }
+            else if (impliedNumber >= proposedNumber) {
+                alert("The implied number is bigger. Try again.")
+            }
+            else if (impliedNumber <= proposedNumber) {
+                alert("The implied number is smaller. Try again.")
+            }
+        }
+    }
+</script>
